@@ -1,38 +1,39 @@
 # jogo-adivinhacao-python
-import random
 
-print("🎯 Jogo da Adivinhação 🎯")
-print("Você tem 5 tentativas, boa sorte!!!")
+    import random
 
-
-def erros(dificuldade, valor):
-    if dificuldade == 1:
-        if 1 > valor or valor > 20:
-            print("❗ O número deve ser entre 1 e 20")
-            return False
-    elif dificuldade == 2:
-        if 1 > valor or valor > 30:
-            print("❗ O número deve ser entre 1 e 30")
-            return False
-    elif dificuldade == 3:
-        if 1 > valor or valor > 40:
-            print("❗ O número deve ser entre 1 e 40")
-            return False
-    elif dificuldade == 4:
-        if 1 > valor or valor > 50:
-            print("❗ O número deve ser entre 1 e 50")
-            return False
-    return True
+    print("🎯 Jogo da Adivinhação 🎯")
+    print("Você tem 5 tentativas, boa sorte!!!")
 
 
-while True:
-    try:
-        dificuldade = int(input(
-            "\n 1. Fácil [Números de 1 a 20]"
-            "\n 2. Média [Números de 1 a 30]"
-            "\n 3. Difícil [Números de 1 a 40]"
-            "\n 4. Impossível [Números de 1 a 50]"
-            "\n Escolha a dificuldade: "
+    def erros(dificuldade, valor):
+        if dificuldade == 1:
+            if 1 > valor or valor > 20:
+                print("❗ O número deve ser entre 1 e 20")
+                return False
+        elif dificuldade == 2:
+            if 1 > valor or valor > 30:
+                print("❗ O número deve ser entre 1 e 30")
+                return False
+        elif dificuldade == 3:
+            if 1 > valor or valor > 40:
+                print("❗ O número deve ser entre 1 e 40")
+                return False
+        elif dificuldade == 4:
+            if 1 > valor or valor > 50:
+                print("❗ O número deve ser entre 1 e 50")
+                return False
+        return True
+
+
+    while True:
+        try:
+            dificuldade = int(input(
+                "\n 1. Fácil [Números de 1 a 20]"
+                "\n 2. Média [Números de 1 a 30]"
+                "\n 3. Difícil [Números de 1 a 40]"
+                "\n 4. Impossível [Números de 1 a 50]"
+                "\n Escolha a dificuldade: "
         ))
     except ValueError:
         print("Digite um número inteiro.")
